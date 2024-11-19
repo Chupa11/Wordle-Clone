@@ -1,0 +1,93 @@
+body{
+    background-color:rgb(34, 34, 34);
+}
+
+#game{
+    background-color:rgb(49, 49, 49);
+    width:500px;
+    height:650px;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    padding:10px;
+    border-radius:6px;
+}
+.row{
+    display:flex;
+    justify-content:space-evenly;
+    flex-direction:row;
+    transition-duration: 1s;
+}
+
+.row:hover{
+    .box{
+        background-color:rgb(44, 44, 44);
+    }
+}
+
+.box{
+    margin:5px;
+    margin-bottom:15px;
+    width:80px;
+    height:80px;
+    background-color:rgb(38, 38, 38);
+    border-radius:6px;
+    transition-duration: .3s;
+    color:white;
+    text-align: center;
+    font-size:60px;
+    display: flex;                /* Use Flexbox */
+    align-items: center;         /* Center vertically */
+    justify-content: center;
+    
+}
+.correct{
+    background-color:green !important;
+}
+.present{
+    background-color:rgb(177, 177, 19) !important;
+}
+.absent{
+    background-color:gray !important;
+}
+
+#popUp {
+    position: relative; /* Needed for positioning the pseudo-element */
+    width: 450px;
+    height: 350px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    overflow: hidden; /* Prevents overflow from the pseudo-element */
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    z-index:1;
+    background-color: rgba(92, 92, 92, .96);
+    color:white;
+    visibility: hidden;
+}
+
+#popUp button{
+    width:50%;
+    height:80px;
+    border-radius:13px;
+    border:none;
+    background-color:#1c1c1c;
+    color:white;
+    font-size:30px;
+    transition-duration: .5s;
+}
+#popUp button:hover{
+    cursor:pointer;
+    background-color:#21b3db;
+    
+}
